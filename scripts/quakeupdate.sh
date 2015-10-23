@@ -4,14 +4,14 @@
 # purger@tomtecsolutions.com
 
 # Defining variables:
-export qUpdateServerMessage="^4The Purgery^7 servers are going down ^4within a minute^7 for daily updating. They will be back in ^410 minutes^7."
+export qBaseURL="https://raw.githubusercontent.com/tjone270/QuakeLiveDS_Scripts/master"
+export qUpdateServerMessage="^7All ^4TomTec Solutions^7 hosted servers are going down ^1within a minute^7 for daily updating. They will be back in ^410 minutes^7."
 export qUpdateLowestRconPort=28960
 export qUpdateHighestRconPort=28970
-export qRconPassword=$(<localConfig-rconPassword.txt)
-export qSteamUsername=$(<localConfig-steamUsername.txt)
-export qSteamPassword=$(<localConfig-steamPassword.txt)
+export qRconPassword=$(<localConfig-rconPassword-purgery.txt)
 
 echo "========== QuakeUpdate.sh has started. =========="
+echo "========= $(date) ========="
 # Informing players in the servers that the servers are going down for a bit.
 counter="$qUpdateLowestRconPort"
 
@@ -28,14 +28,17 @@ echo Stopping Quake Servers...
 
 # Running 'steamcmd' to update qzeroded
 echo Updating Quake Server...
-~/steamcmd/steamcmd.sh +login "$qSteamUsername" "$qSteamPassword" +force_install_dir ~/steamcmd/steamapps/common/qlds/ +app_update 349090 +quit
+~/steamcmd/steamcmd.sh +login anonymous +force_install_dir ~/steamcmd/steamapps/common/qlds/ +app_update 349090 +quit
 
 # Updating mappools/configs/factories
+curl $qBaseURL/scripts/quakeconfig.sh > quakeconfig.sh; dos2unix quakeconfig.sh; chmod +x quakeconfig.sh
 sh quakeconfig.sh
 
 # Removing the .quakelive directories, except for baseq3.
-echo Removing 2* directories...
-rm -rf ~/.quakelive/2*
+echo Removing Purgery port directories...
+cd ~/.quakelive
+rm -rf 27960 27961 27962 27963 27964 27965 27966 27967 27968 27969 27970
+cd ~
 
 # Running 'autodownload.sh' to recache all workshop items before restarting.
 bash ~/autodownload.sh
