@@ -30,7 +30,7 @@ echo "Starting clan arena server 1..."
 exec $qPathToStartScript \
     +set net_strict 1 \
     +set net_port $gameport \
-    +set sv_hostname "   #$servernum The Purgery $qServerLocation PQL - Clan Arena" \
+    +set sv_hostname "     #$servernum The Purgery $qServerLocation PQL - Clan Arena" \
     +set zmq_rcon_enable 1 \
     +set zmq_rcon_password "$qRconPasswordPurgery" \
     +set zmq_rcon_port $rconport \
@@ -38,9 +38,9 @@ exec $qPathToStartScript \
     +set zmq_stats_password "$qRconPasswordPurgery" \
     +set zmq_stats_port $gameport \
     +set sv_tags "$sponsortag" \
-    +set g_voteFlags "13320" \
-	+set g_allowSpecVote 1 \
-	+set g_allowVoteMidGame 1 \
+    +set g_voteFlags "9320" \
+	+set g_allowSpecVote 0 \
+	+set g_allowVoteMidGame 0 \
 	+set bot_enable 1 \
 	+set bot_nochat 1 \
     +set g_accessFile "access_purgery.txt" \
@@ -53,7 +53,7 @@ echo "Starting clan arena server 2..."
 exec $qPathToStartScript \
     +set net_strict 1 \
     +set net_port $gameport \
-    +set sv_hostname "  #$servernum The Purgery $qServerLocation VQL - Clan Arena" \
+    +set sv_hostname "    #$servernum The Purgery $qServerLocation VQL - Clan Arena" \
     +set zmq_rcon_enable 1 \
     +set zmq_rcon_password "$qRconPasswordPurgery" \
     +set zmq_rcon_port $rconport \
@@ -61,14 +61,15 @@ exec $qPathToStartScript \
     +set zmq_stats_password "$qRconPasswordPurgery" \
     +set zmq_stats_port $gameport \
     +set sv_tags "$sponsortag" \
-    +set g_voteFlags "13320" \
-    +set g_allowSpecVote 1 \
-    +set g_allowVoteMidGame 1 \
+    +set g_voteFlags "9320" \
+    +set g_allowSpecVote 0 \
+    +set g_allowVoteMidGame 0 \
     +set bot_enable 1 \
     +set bot_nochat 1 \
     +set g_accessFile "access_purgery.txt" \
     +set sv_mappoolFile "mappool_vqlca.txt" \
-    +set fs_homepath ~/.quakelive/$gameport
+    +set fs_homepath ~/.quakelive/$gameport \
+    +set g_damage_lg 7
 elif [ $1 -eq 2 ]
 # starting PQL Race 1...
 then
@@ -76,7 +77,7 @@ echo "Starting race server 1..."
 exec $qPathToStartScript \
     +set net_strict 1 \
     +set net_port $gameport \
-    +set sv_hostname "  #$servernum The Purgery $qServerLocation PQL - Race" \
+    +set sv_hostname "    #$servernum The Purgery $qServerLocation PQL - Race" \
     +set zmq_rcon_enable 1 \
     +set zmq_rcon_password "$qRconPasswordPurgery" \
     +set zmq_rcon_port $rconport \
@@ -84,9 +85,9 @@ exec $qPathToStartScript \
     +set zmq_stats_password "$qRconPasswordPurgery" \
     +set zmq_stats_port $gameport \
     +set sv_tags "grappling hook, crouch slide,$sponsortag" \
-    +set g_voteFlags "13320" \
-	+set g_allowSpecVote 1 \
-	+set g_allowVoteMidGame 1 \
+    +set g_voteFlags "9320" \
+	+set g_allowSpecVote 0 \
+	+set g_allowVoteMidGame 0 \
     +set bot_enable 1 \
    	+set bot_nochat 1 \
     +set g_accessFile "access_purgery.txt" \
@@ -99,7 +100,7 @@ echo "Starting free for all server 1..."
 exec $qPathToStartScript \
     +set net_strict 1 \
     +set net_port $gameport \
-    +set sv_hostname "  #$servernum The Purgery $qServerLocation PQL - Free For All" \
+    +set sv_hostname "    #$servernum The Purgery $qServerLocation PQL - Free For All" \
     +set zmq_rcon_enable 1 \
     +set zmq_rcon_password "$qRconPasswordPurgery" \
     +set zmq_rcon_port $rconport \
@@ -107,9 +108,9 @@ exec $qPathToStartScript \
     +set zmq_stats_password "$qRconPasswordPurgery" \
     +set zmq_stats_port $gameport \
     +set sv_tags "$sponsortag" \
-    +set g_voteFlags "13320" \
-	+set g_allowSpecVote 1 \
-	+set g_allowVoteMidGame 1 \
+    +set g_voteFlags "9320" \
+	+set g_allowSpecVote 0 \
+	+set g_allowVoteMidGame 0 \
     +set bot_enable 1 \
    	+set bot_nochat 1 \
     +set g_accessFile "access_purgery.txt" \
@@ -122,7 +123,7 @@ echo "Starting capture the flag server 1..."
 exec $qPathToStartScript \
     +set net_strict 1 \
     +set net_port $gameport \
-    +set sv_hostname "  #$servernum The Purgery $qServerLocation PQL - Capture the Flag" \
+    +set sv_hostname "    #$servernum The Purgery $qServerLocation VQL - Capture the Flag" \
     +set zmq_rcon_enable 1 \
     +set zmq_rcon_password "$qRconPasswordPurgery" \
     +set zmq_rcon_port $rconport \
@@ -130,14 +131,15 @@ exec $qPathToStartScript \
     +set zmq_stats_password "$qRconPasswordPurgery" \
     +set zmq_stats_port $gameport \
     +set sv_tags "$sponsortag" \
-    +set g_voteFlags "13320" \
-	+set g_allowSpecVote 1 \
-	+set g_allowVoteMidGame 1 \
+    +set g_voteFlags "9320" \
+	+set g_allowSpecVote 0 \
+	+set g_allowVoteMidGame 0 \
     +set bot_enable 1 \
    	+set bot_nochat 1 \
     +set g_accessFile "access_purgery.txt" \
-    +set sv_mappoolFile "mappool_pqlctf.txt" \
-	+set fs_homepath ~/.quakelive/$gameport
+    +set sv_mappoolFile "mappool_vqlctf.txt" \
+	+set fs_homepath ~/.quakelive/$gameport \
+    +set g_damage_lg 6
 elif [ $1 -eq 5 ]
 # starting PQL DOM 1...
 then
@@ -145,7 +147,7 @@ echo "Starting domination server 1..."
 exec $qPathToStartScript \
     +set net_strict 1 \
     +set net_port $gameport \
-    +set sv_hostname "  #$servernum The Purgery $qServerLocation PQL - Domination" \
+    +set sv_hostname "    #$servernum The Purgery $qServerLocation PQL - Domination" \
     +set zmq_rcon_enable 1 \
     +set zmq_rcon_password "$qRconPasswordPurgery" \
     +set zmq_rcon_port $rconport \
@@ -153,9 +155,9 @@ exec $qPathToStartScript \
     +set zmq_stats_password "$qRconPasswordPurgery" \
     +set zmq_stats_port $gameport \
     +set sv_tags "$sponsortag" \
-    +set g_voteFlags "13320" \
-	+set g_allowSpecVote 1 \
-	+set g_allowVoteMidGame 1 \
+    +set g_voteFlags "9320" \
+	+set g_allowSpecVote 0 \
+	+set g_allowVoteMidGame 0 \
     +set bot_enable 1 \
    	+set bot_nochat 1 \
     +set g_accessFile "access_purgery.txt" \
@@ -168,7 +170,7 @@ echo "Starting infected server 1..."
 exec $qPathToStartScript \
     +set net_strict 1 \
     +set net_port $gameport \
-    +set sv_hostname "  #$servernum The Purgery $qServerLocation PQL - Infected" \
+    +set sv_hostname "    #$servernum The Purgery $qServerLocation PQL - Infected" \
     +set zmq_rcon_enable 1 \
     +set zmq_rcon_password "$qRconPasswordPurgery" \
     +set zmq_rcon_port $rconport \
@@ -176,9 +178,9 @@ exec $qPathToStartScript \
     +set zmq_stats_password "$qRconPasswordPurgery" \
     +set zmq_stats_port $gameport \
     +set sv_tags "zombies,$sponsortag" \
-    +set g_voteFlags "13320" \
-	+set g_allowSpecVote 1 \
-	+set g_allowVoteMidGame 1 \
+    +set g_voteFlags "9320" \
+	+set g_allowSpecVote 0 \
+	+set g_allowVoteMidGame 0 \
     +set bot_enable 1 \
    	+set bot_nochat 1 \
     +set g_accessFile "access_purgery.txt" \
@@ -191,7 +193,7 @@ echo "Starting team deathmatch server 1..."
 exec $qPathToStartScript \
     +set net_strict 1 \
     +set net_port $gameport \
-    +set sv_hostname "  #$servernum The Purgery $qServerLocation PQL - Team Deathmatch" \
+    +set sv_hostname "    #$servernum The Purgery $qServerLocation PQL - Team Deathmatch" \
     +set zmq_rcon_enable 1 \
     +set zmq_rcon_password "$qRconPasswordPurgery" \
     +set zmq_rcon_port $rconport \
@@ -199,9 +201,9 @@ exec $qPathToStartScript \
     +set zmq_stats_password "$qRconPasswordPurgery" \
     +set zmq_stats_port $gameport \
     +set sv_tags "$sponsortag" \
-    +set g_voteFlags "13320" \
-	+set g_allowSpecVote 1 \
-	+set g_allowVoteMidGame 1 \
+    +set g_voteFlags "9320" \
+	+set g_allowSpecVote 0 \
+	+set g_allowVoteMidGame 0 \
     +set bot_enable 1 \
    	+set bot_nochat 1 \
     +set g_accessFile "access_purgery.txt" \
@@ -214,7 +216,7 @@ echo "Starting multi game type server 1..."
 exec $qPathToStartScript \
     +set net_strict 1 \
     +set net_port $gameport \
-    +set sv_hostname "  #$servernum The Purgery $qServerLocation PQL - Multi-Gametype Turbo" \
+    +set sv_hostname "    #$servernum The Purgery $qServerLocation PQL - Multi-Gametype Turbo" \
     +set zmq_rcon_enable 1 \
     +set zmq_rcon_password "$qRconPasswordPurgery" \
     +set zmq_rcon_port $rconport \
@@ -222,8 +224,8 @@ exec $qPathToStartScript \
     +set zmq_stats_password "$qRconPasswordPurgery" \
     +set zmq_stats_port $gameport \
     +set sv_tags "$sponsortag" \
-    +set g_allowSpecVote 1 \
-    +set g_allowVoteMidGame 1 \
+    +set g_allowSpecVote 0 \
+    +set g_allowVoteMidGame 0 \
     +set bot_enable 1 \
     +set bot_nochat 1 \
     +set g_accessFile "access_purgery.txt" \
@@ -236,7 +238,7 @@ echo "Starting VQL duel server 1..."
 exec $qPathToStartScript \
     +set net_strict 1 \
     +set net_port $gameport \
-    +set sv_hostname "  #$servernum The Purgery $qServerLocation VQL - Duel" \
+    +set sv_hostname "    #$servernum The Purgery $qServerLocation VQL - Duel" \
     +set zmq_rcon_enable 1 \
     +set zmq_rcon_password "$qRconPasswordPurgery" \
     +set zmq_rcon_port $rconport \
@@ -244,18 +246,19 @@ exec $qPathToStartScript \
     +set zmq_stats_password "$qRconPasswordPurgery" \
     +set zmq_stats_port $gameport \
     +set sv_tags "$sponsortag" \
-    +set g_voteFlags "13320" \
+    +set g_voteFlags "9320" \
     +set g_allowSpecVote 0 \
     +set g_allowVoteMidGame 0 \
     +set bot_enable 1 \
     +set bot_nochat 1 \
+    +set g_damage_lg 6 \
     +set g_accessFile "access_purgery.txt" \
     +set sv_mappoolFile "mappool_vqlduel.txt" \
     +set fs_homepath ~/.quakelive/$gameport
 elif [ $1 -eq 10 ]
 # starting VQL iCTF 1...
 then
-echo "Starting VQL iCTF type server 1..."
+echo "Starting VQL iCTF server 1..."
 exec $qPathToStartScript \
     +set net_strict 1 \
     +set net_port $gameport \
@@ -267,13 +270,15 @@ exec $qPathToStartScript \
     +set zmq_stats_password "$qRconPasswordPurgery" \
     +set zmq_stats_port $gameport \
     +set sv_tags "$sponsortag" \
-    +set g_allowSpecVote 1 \
-    +set g_allowVoteMidGame 1 \
+    +set g_allowSpecVote 0 \
+    +set g_allowVoteMidGame 0 \
     +set bot_enable 1 \
     +set bot_nochat 1 \
     +set g_accessFile "access_purgery.txt" \
     +set sv_mappoolFile "mappool_vqlictf.txt" \
-    +set fs_homepath ~/.quakelive/$gameport
+    +set fs_homepath ~/.quakelive/$gameport \
+    +set g_damage_lg 6 \
+    +set g_voteFlags 0
 elif [ $1 -eq 11 ]
 # starting mickzerofive's brisbane server 1...
 then
@@ -291,13 +296,13 @@ exec $qPathToStartScript \
     +set zmq_stats_password "$qRconPassword4sg" \
     +set zmq_stats_port $gameport \
     +set sv_tags "4Seasons Gaming,$qServerLocation" \
-    +set g_allowSpecVote 1 \
-    +set g_allowVoteMidGame 1 \
+    +set g_allowSpecVote 0 \
+    +set g_allowVoteMidGame 0 \
     +set bot_enable 1 \
     +set bot_nochat 1 \
     +set g_accessFile "access_mickzerofive.txt" \
     +set sv_mappoolFile "mappool_default.txt" \
-    +set fs_homepath ~/.quakelive/$gameport
+    +set fs_homepath ~/.quakelive/mickzerofive-27971
 else
 echo "This system is not intended to host MickZeroFive's server."
 fi
